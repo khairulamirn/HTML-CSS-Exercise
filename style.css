@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+    font-weight: bold;
+}
+
+section {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+a, button {
+    all: unset;
+    cursor: pointer;
+}
+
+#hero {
+    width: 1440px;
+    height: 725px;
+    background-image: url(assets/background-one.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+#hero > .nav-bar {
+    width: 1322px;
+    height: 91px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+#hero > .nav-bar > h1 {
+    margin: 0 50px 0 197px;
+    font-size: 24px;
+}
+
+#hero > .nav-bar > a {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+#hero > .nav-bar > .button {
+    width: 300px;
+    height: 52px;
+    margin: 0 143px 0 148px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#hero > .nav-bar > .button > .blue-button {
+    width: 137px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color:  #23A6F0;
+}
+
+#text {
+    width: 599px;
+    height: 401px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+}
+
+#text > p {
+    width: 128px;
+    height: 24px;
+    font-size: 16px;
+    color: #23A6F0;
+}
+
+#text > h1 {
+    width: 542px;
+    height: 160px;
+    font-size: 58px;
+    font-weight: bold;
+    /* line weight */
+}
