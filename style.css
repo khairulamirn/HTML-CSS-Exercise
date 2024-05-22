@@ -19,7 +19,7 @@ a, button {
 }
 
 #hero {
-    width: 1440px;
+    width: auto;
     height: 725px;
     background-image: url(assets/background-one.svg);
     background-size: cover;
@@ -166,18 +166,25 @@ a, button {
     z-index: 1;
 }
 
-#hero > #box {
+#hero > #main-box {
+    width: 1112px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+#hero > #main-box > #box {
     width: 1100px;
+    margin: 0 auto;
     position: relative;
-    bottom: 30px;
-    left: 140px;
+    bottom: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     z-index: 4;
 }
 
-#hero > #box > div {
+#hero > #main-box > #box > div {
     width: 328px;
     height: 292px;
     display: flex;
@@ -186,7 +193,7 @@ a, button {
     box-shadow: 0px 16px 10px -5px #f1f0f0 ;
 }
 
-#hero > #box > div > .box  {
+#hero > #main-box > #box > div > .box  {
     margin: auto 30px auto 0;
     display: flex;
     flex-direction: column;
@@ -195,7 +202,7 @@ a, button {
     text-align: left;
 }
 
-#hero > #box > div > .red {
+#hero > #main-box > #box > div > .red {
     width: 70px;
     height: 76px;
     margin: auto;
@@ -203,12 +210,12 @@ a, button {
     border-radius: 10px;
 }
 
-#hero > #box > div > .box > h4 {
+#hero > #main-box > #box > div > .box > h4 {
     font-size: 16px;
     color: #252B42;
 }
 
-#hero > #box > div > .box > p {
+#hero > #main-box > #box > div > .box > p {
     width: 222px;
     height: 60px;
     font-size: 14px;
@@ -236,7 +243,91 @@ a, button {
     align-items: start;
 }
 
+#second > #text > h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color:#252B42;
+}
+
+#second > #text > p {
+    width: 345px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 400;
+    color:#737373;
+}
+
+#second > #text > .learn-more2 {
+    width: 120px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #23A6F0;
+}
+
 #second > #img {
+    position: relative;
     width: 513px;
     height: 424px;
+}
+
+#second > #img > .boyandgirl {
+    position: absolute;
+    left: 80px;
+}
+#second > #img > .calendar {
+    position: absolute;
+    right: 380px;
+    top: 85px;
+    z-index: 2;
+}
+#second > #img > .data2 {
+    position: absolute;
+    top: 320px;
+    right: 200px;
+    z-index: 2;
+}
+#second > #img > .up {
+    position: absolute; 
+    left: 410px;
+}
+#second > #img > .down {
+    position: absolute;
+    bottom: 15px;
+    left: 410px;
+}
+
+#third {
+    height: 1236px;
+    padding-top: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #252B42;
+    color: white;
+}
+
+#third > h6 {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #23A6F0;
+}
+
+#third > h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+    
+}
+
+#third > p {
+    width: 463px;
+    height: 40px;
+    margin-bottom: 70px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
 }
