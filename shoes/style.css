@@ -13,14 +13,14 @@
     z-index: 9999;
     width: 15px;
     height: 15px;
-    background: #d9ff00;
+    background: #f0eeee;
     border-radius: 50%;
     pointer-events: none;
     box-shadow: 0 0 20px #aa2b2b, 
                 0 0 60px #aa2b2b, 
                 0 0 100px #aa2b2b;
     transform: translate(-50%, -50%);
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .cursor::before {
@@ -29,7 +29,7 @@
     height: 40px;
     position: absolute;
     background: #000000;
-    opacity: 0.4;
+    opacity: 0.2;
     transform: translate(-30%, -30%);
     border-radius: 50%;
 }
