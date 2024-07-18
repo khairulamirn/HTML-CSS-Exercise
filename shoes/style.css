@@ -4,7 +4,6 @@
     box-sizing: border-box;
     cursor: none !important;
     font-family: Cabin;
-    color: white;
     overflow: hidden;
 }
 
@@ -37,6 +36,7 @@
 #containerPages {
     max-width: 100%;
     height: 100vh;
+    color: white;
 }
 
 .page {
@@ -117,7 +117,6 @@ nav {
     margin: 0 auto;
 }
 
-
 nav ul {
     display: flex;
     gap: 60px;
@@ -134,11 +133,23 @@ nav ul li:hover {
     border-bottom-left-radius: 10px;
 }
 
-#shoesContainer i {
+#shoesContainer {
+    height: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
+}
+
+#shoesContainer i {
+    width: fit-content;
+    height: fit-content;
+    font-size: 130px;
     cursor: pointer;
+}
+
+.page-one #shoesContainer i {
+    color: color-mix(in srgb, #1867ff 20%, #B800E0 90%);
 }
 
 #shoesContainer img {
@@ -148,4 +159,36 @@ nav ul li:hover {
     transform: translate(-50%, -50%);
     max-width: 40%;
     filter: drop-shadow(0 0 20px black);
+}
+
+#shoesContainer h1 {
+    width: 70%;
+    text-align: center;
+    font-weight: 900;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -48%);
+    font-size: 100px;
+    color: transparent;
+    letter-spacing: 10px;
+    filter: brightness(0.85), drop-shadow(0 0 20px black);
+}
+
+#shoesContainer > #mid > h1 > .h1a {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+#shoesContainer > #mid > h1 > .h1b {
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 95%;
+    margin: 0 auto;
+    height: 30px;
 }
