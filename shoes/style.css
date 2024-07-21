@@ -42,7 +42,7 @@
 .page {
     position: absolute;
     width: 100%;
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out;
     backface-visibility: hidden;
     opacity: 0;
     z-index: 1;
@@ -98,7 +98,7 @@
 .page-two {
     background-color: rgb(66, 66, 212);
     background-size: 150% 150%;
-	animation: gradient 15s ease infinite;
+	animation: gradient 10s ease infinite;
 	height: 100vh;
 }
 
@@ -134,18 +134,36 @@ nav ul li:hover {
 }
 
 #shoesContainer {
+    max-width: 99%;
+    margin: 0 auto;
     height: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
 }
 
 #shoesContainer i {
+    position: relative;
     width: fit-content;
     height: fit-content;
-    font-size: 130px;
+    font-size: 120px;
     cursor: pointer;
+    animation: gradient 10s ease infinite;
+}
+
+/* i element */
+#shoesContainer .bi-caret-left {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-48%);
+}
+
+/* i element */
+#shoesContainer .bi-caret-right {
+    position: absolute;
+    right: 0;
+    top: 48%;
+    transform: translate(0, -48%);
 }
 
 .page-one #shoesContainer i {
@@ -154,9 +172,9 @@ nav ul li:hover {
 
 #shoesContainer img {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -35%);
     max-width: 40%;
     filter: drop-shadow(0 0 20px black);
 }
@@ -166,10 +184,10 @@ nav ul li:hover {
     text-align: center;
     font-weight: 900;
     position: absolute;
-    top: 48%;
+    top: 47%;
     left: 50%;
-    transform: translate(-50%, -48%);
-    font-size: 100px;
+    transform: translate(-50%, -47%);
+    font-size: 105px;
     color: transparent;
     letter-spacing: 10px;
     filter: brightness(0.85), drop-shadow(0 0 20px black);
@@ -190,5 +208,37 @@ footer {
     align-items: center;
     max-width: 95%;
     margin: 0 auto;
+    height: 100px;
+}
+
+footer div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+footer div h3 {
+    font-size: 50px;
+    font-family: "Black Ops One";
+}
+
+footer div p {
+    font-size: 16px;
+}
+
+footer button {
+    width: 157px;
     height: 30px;
+    font-family: "Black Ops One";
+    font-weight: 250;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+footer hr {
+    width: 100px;
+    margin: 0 auto;
 }

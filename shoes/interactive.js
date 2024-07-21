@@ -12,9 +12,9 @@ const clickableArray = Array.from(clickable);
 
 // IMAGE SLIDER
 let currentIndex = 0;
-const pageOneClick = clickableArray.slice(0, 5);
-const pageTwoClick = clickableArray.slice(5, 10);
-const pageThreeClick = clickableArray.slice(10, 15);
+const pageOneClick = clickableArray.slice(0, 8);
+const pageTwoClick = clickableArray.slice(8, 16);
+const pageThreeClick = clickableArray.slice(16, 24);
 
 const slide = (direction) => {
     // Remove active class from all pages
@@ -99,3 +99,8 @@ clickable.forEach((click) => {
 document.addEventListener('mouseout', () => {
     cursor.style.display = 'none';
 });
+
+// cursor on refresh page 
+window.onload = () => {
+    cursor.style.display = 'none';
+}
