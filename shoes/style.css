@@ -46,35 +46,14 @@
     backface-visibility: hidden;
     opacity: 0;
     z-index: 1;
+    background-size: 150% 150%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
 }
 
 .page.active {
     opacity: 1;
     z-index: 2;
-}
-
-.page-one {
-	background: linear-gradient(to bottom right,
-    hsl(270.24, 76.69%, 31.96%) 0%,
-    hsl(270.73, 76.76%, 31.92%) 8.1%,
-    hsl(272.1, 76.96%, 31.82%) 15.5%,
-    hsl(274.14, 77.29%, 31.65%) 22.5%,
-    hsl(276.67, 77.72%, 31.44%) 29%,
-    hsl(279.51, 78.26%, 31.18%) 35.3%,
-    hsl(282.53, 78.89%, 30.89%) 41.2%,
-    hsl(285.59, 79.6%, 30.57%) 47.1%,
-    hsl(288.58, 80.38%, 30.25%) 52.9%,
-    hsl(291.43, 81.21%, 29.92%) 58.8%,
-    hsl(294.04, 82.06%, 29.59%) 64.7%,
-    hsl(296.34, 82.9%, 29.29%) 71%,
-    hsl(298.25, 83.68%, 29.03%) 77.5%,
-    hsl(299.71, 84.33%, 28.82%) 84.5%,
-    hsl(300.63, 84.91%, 28.94%) 91.9%,
-    hsl(300.95, 85.14%, 29.02%) 100%
-    );
-	background-size: 150% 150%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
 }
 
 @keyframes gradient {
@@ -95,21 +74,46 @@
     }
 } 
 
+.page-one {
+	background: linear-gradient(to bottom right,
+    hsl(270.24, 76.69%, 31.96%) 0%,
+    hsl(270.73, 76.76%, 31.92%) 8.1%,
+    hsl(272.1, 76.96%, 31.82%) 15.5%,
+    hsl(274.14, 77.29%, 31.65%) 22.5%,
+    hsl(276.67, 77.72%, 31.44%) 29%,
+    hsl(279.51, 78.26%, 31.18%) 35.3%,
+    hsl(282.53, 78.89%, 30.89%) 41.2%,
+    hsl(285.59, 79.6%, 30.57%) 47.1%,
+    hsl(288.58, 80.38%, 30.25%) 52.9%,
+    hsl(291.43, 81.21%, 29.92%) 58.8%,
+    hsl(294.04, 82.06%, 29.59%) 64.7%,
+    hsl(296.34, 82.9%, 29.29%) 71%,
+    hsl(298.25, 83.68%, 29.03%) 77.5%,
+    hsl(299.71, 84.33%, 28.82%) 84.5%,
+    hsl(300.63, 84.91%, 28.94%) 91.9%,
+    hsl(300.95, 85.14%, 29.02%) 100%
+    );
+}
+
+
 .page-two {
-    background-color: rgb(66, 66, 212);
-    background-size: 150% 150%;
-	animation: gradient 10s ease infinite;
-	height: 100vh;
+    background: linear-gradient(0deg,  
+    #3843db 0%, 
+    #c27ce0 50%, 
+    #4b40cd 100%);
 }
 
 .page-three {
-    background-color: rgb(190, 68, 68);
-    background-size: 150% 150%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
+    background: linear-gradient(180deg, 
+    rgb(252, 115, 156) 0%, 
+    rgb(246, 111, 163) 15%, 
+    rgb(234, 103, 176) 30%, 
+    rgb(186, 81, 210) 60%, 
+    rgb(144, 95, 233) 90%, 
+    rgb(139, 102, 241) 100%);
 }
 
-nav {
+header > nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,20 +121,28 @@ nav {
     margin: 0 auto;
 }
 
-nav ul {
+header > nav ul {
     display: flex;
     gap: 60px;
     height: 30px;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: 3px;
 }
 
-nav ul li {
+.page-one header > nav ul li {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     filter: brightness(0.85);
 }
 
-nav ul li:hover {
+header > nav ul li:hover {
     border-bottom: 3px solid white;
-    border-bottom-left-radius: 10px;
+}
+
+header > nav div {
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 
 #shoesContainer {
@@ -168,6 +180,16 @@ nav ul li:hover {
 
 .page-one #shoesContainer i {
     color: color-mix(in srgb, #1867ff 20%, #B800E0 90%);
+    opacity: 0.5;
+}
+
+.page-two #shoesContainer i {
+    opacity: 0.5;
+}
+
+.page-three #shoesContainer i {
+    color: color-mix(in srgb, #1867FF 20%, #D516FF 80%);
+    opacity: 0.5;
 }
 
 #shoesContainer img {
@@ -241,4 +263,8 @@ footer button {
 footer hr {
     width: 100px;
     margin: 0 auto;
+}
+
+.page-three footer hr {
+    border: 1px solid #000;
 }
