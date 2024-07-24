@@ -33,11 +33,28 @@ ul {
 ul li {
     list-style: none;
     margin: 0 20px;
+    cursor: pointer;
 }
 
-nav button {
-    border: 1px solid black;
+hr {
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+hr.active {
+    opacity: 1;
+}
+
+header button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
     border-radius: 50%;
+    background-color: transparent;
+}
+
+header button i {
+    color: white;
 }
 
 #titleImage {
@@ -67,6 +84,7 @@ nav button {
     border-radius: 64px;
     background: transparent;
     color: violet;
+    cursor: pointer;
 }
 
 #productImage {
@@ -78,4 +96,5 @@ nav button {
 
 #productImage img {
     width: 80vw;
+    -webkit-user-drag: none;
 }
