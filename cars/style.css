@@ -95,7 +95,6 @@ header button i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 
 #productImage img.car {
@@ -105,6 +104,13 @@ header button i {
     top: 85%;
     left: 50%;
     transform: translate(-50%, -85%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
+}
+
+#productImage img.car.active {
+    opacity: 1;
 }
 
 #productImage button {
@@ -112,8 +118,23 @@ header button i {
     height: 40px;
     border: 1px solid white;
     border-radius: 50%;
-    background: transparent;
+    background: rgb(211, 211, 211, 0.4);
     cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    top: 90%;
+    left: 75%;
+    transform: translate(75%, -90%);
+}
+
+#productImage button.left {
+    left: 75%;
+    transform: translateX(-75%);
+}
+
+#productImage button.right {
+    left: 80%;
+    transform: translateX(-80%);
 }
 
 #productImage button img#arrow {
