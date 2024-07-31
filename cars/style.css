@@ -3,11 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
-
-body {
-    /* overflow: hidden; */
-    background: radial-gradient(circle, rgba(178,45,232,1) 0%, rgba(71,0,100,1) 100%);
+    color: white;
 }
 
 #pageContainer {
@@ -34,6 +30,7 @@ ul li {
     list-style: none;
     margin: 0 20px;
     cursor: pointer;
+    font-weight: 200;
 }
 
 hr {
@@ -55,10 +52,6 @@ header button {
     background-color: transparent;
 }
 
-header button i {
-    color: white;
-}
-
 #titleImage {
     margin-top: 2%;
     padding: 0 50px;
@@ -68,17 +61,36 @@ header button i {
     z-index: 9999;
 }
 
-#titleImage .left h1,
-#titleImage .left h3 {
-    font-weight: 100;
+#titleImage .left {
+    position: absolute;
+    top: 19%;
+    left: 5%;
+    opacity: 0;
 }
 
+#titleImage .left.active {
+    opacity: 1;
+}
+
+#titleImage .left h1,
+#titleImage .left h3 {
+    font-weight: 150;
+    cursor: default;
+    background: -webkit-linear-gradient(#ffffff, #cfcfcf);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
 #titleImage .right {
-    display: flex;
-    gap: 20px;
+    position: absolute;
+    z-index: 9999;
+    top: 20%;
+    right: 5%;
 }
 
 #titleImage .right button {
+    margin: 10px;
     width: 150px;
     height: 50px;
     font-weight: 250;
@@ -86,8 +98,11 @@ header button i {
     border: 1px solid white;
     border-radius: 64px;
     background: transparent;
-    color: violet;
     cursor: pointer;
+}
+
+#titleImage .right button#buyNow {
+    background: rgb(211, 211, 211, 0.25);
 }
 
 #productImage {
